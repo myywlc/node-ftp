@@ -1,0 +1,26 @@
+{
+  "name": "ftp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/myywlc/node-ftp.git"
+  },
+  "keywords": [],
+  "author": "凌",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/myywlc/node-ftp/issues"
+  },
+  "homepage": "https://github.com/myywlc/node-ftp#readme",
+  "dependencies": {
+    "ftp-srv": "^4.6.2"
+  },
+  "devDependencies": {
+    "@types/node": "^18.7.5"
+  }
+}
