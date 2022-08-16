@@ -23,4 +23,6 @@ ftpServer.on('login', ({ connection, username, password }, resolve, reject) => {
 
 ftpServer.listen().then(() => {
   console.log('Ftp server is starting...');
+}).catch(e => {
+  console.log(e);
 });
