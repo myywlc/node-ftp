@@ -29,11 +29,6 @@ ftpServer.on('closed', ({}) => {
   console.log('Ftp server is closed');
 });
 
-ftpServer.on('RETR', (error, filePath) => {
-  console.log('RETR' + filePath);
-  console.log(error, 'error');
-});
-
 ftpServer.listen().then(() => {
   console.log('Ftp server is starting...');
 }).catch(e => {
