@@ -1,10 +1,12 @@
-// Quick start, create an active ftp server.
+const address = require('address');
 const FtpSrv = require('ftp-srv');
 
+const ip = address.ip();
+const hostname = '0.0.0.0';
 const port = 2121;
 const ftpServer = new FtpSrv({
-  url: 'ftp://0.0.0.0:' + port,
-  pasv_url: 'ftp://10.0.30.233',
+  url: `ftp://${hostname}:${port}`,
+  pasv_url: `ftp://${ip}`,
   pasv_min: 2122,
   pasv_max: 2123,
   file_format: 'ls',

@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/myywlc/node-ftp#readme",
   "dependencies": {
+    "address": "^1.2.0",
     "ftp-srv": "^4.6.2"
   },
   "devDependencies": {
