@@ -21,8 +21,22 @@ ftpServer.on('login', ({ connection, username, password }, resolve, reject) => {
   return reject(new errors.GeneralError('Invalid username or password', 401));
 });
 
+ftpServer.on('closing', () => {
+  console.log('Ftp server is closing');
+});
+
+ftpServer.on('closed', ({}) => {
+  console.log('Ftp server is closed');
+});
+
+ftpServer.on('RETR', (error, filePath) => {
+  console.log('RETR' + filePath);
+  console.log(error, 'error');
+});
+
 ftpServer.listen().then(() => {
   console.log('Ftp server is starting...');
 }).catch(e => {
   console.log(e);
 });
+
